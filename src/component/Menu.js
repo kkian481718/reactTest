@@ -48,6 +48,7 @@ function Menu({ title, children }) {
     <div style={menuContainerStyle}>
       <p style={menuTitleStyle}>{title}</p>
       <button
+        className="menu-btn"
         style={menuBtnStyle}
         onClick={() => {
           setIsOpen(!isOpen);
@@ -55,7 +56,7 @@ function Menu({ title, children }) {
       >
         V
       </button>
-      {isOpen && <ul>{children}</ul>}
+      <ul className="menu">{children}</ul>
     </div>
   );
 }
